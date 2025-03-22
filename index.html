@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="w-10/12 mx-auto my-0 py-8 md:py-12 lg:p-14">
+        <!-- navbar section-->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <img src="images/logo.webp" alt="paw-logo">
+                    <a class="btn btn-ghost text-3xl font-black">Peddy</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-xl">
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Shop</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                        stroke="currentColor" className="size-6" class="rounded-full"
+                        style="width: 56px; height : 56px; border: 0.5px solid; padding: 10px;">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <!-- banner section -->
+        <section class="w-10/12 mx-auto">
+            <div class="banner-head text-center">
+                <h3 class="font-bold text-xl md:text-2xl text-gray-500 mb-4">Bringing Families Together ❤️‍🔥</h3>
+                <h2 class="font-black text-4xl md:text-5xl lg:text-7xl">Your Path to Adoption <br> Starts Here</h2>
+            </div>
+            <div class="text-center my-12 p-0">
+                <a href="#pet-container"><button
+                        class="btn btn-success md:btn-md lg:btn-lg bg-[#0E7A81] text-neutral-950">View More</button></a>
+            </div>
+            <div>
+                <img src="images/pet.webp" alt="adorable-pet-picture" class="mx-auto">
+            </div>
+            <div class="text-center">
+                <h2 class="font-black text-2xl md:text-3xl lg:text-4xl">Adopt Your Best Friend</h2>
+                <h3 class="text-md lg:text-lg my-4 w-2/3 mx-auto">Start your journey to adoption with confidence. Explore your options,
+                    learn about each pets and choose your new family member.We're here to help you build the loving
+                    family you've always dreamed of.
+                </h3>
+            </div>
+        </section>
+        <!-- card section -->
+        <section class="w-10/12 mx-auto my-12">
+            <!-- card button -->
+            <div  class="flex justify-between">
+                <button id="dog-btn" onclick="loadCategorisedData(`Dog`),changeBtnColor('dog-btn','cat-btn','rabbit-btn','bird-btn')"
+                    class="btn hover:rounded-full md:px-5 btn-md  lg:px-10 lg:btn-lg">
+                    <img src="https://i.ibb.co.com/c8Yp1y7/dog.png" class="w-8 h-8">
+                    Dogs
+                </button>
+                <button id="cat-btn" onclick="loadCategorisedData(`Cat`),changeBtnColor('cat-btn','dog-btn','rabbit-btn','bird-btn')"
+                    class="btn hover:rounded-full md:px-5 md:btn-md  lg:px-10 lg:btn-lg">
+                    <img src="https://i.ibb.co.com/N7dM2K1/cat.png" class="w-8 h-8">
+                    Cats
+                </button>
+                <button id="rabbit-btn" onclick="loadCategorisedData(`Rabbit`),changeBtnColor('rabbit-btn','dog-btn','cat-btn','bird-btn')"
+                    class="btn hover:rounded-full md:px-5 md:btn-md  lg:px-10 lg:btn-lg">
+                    <img src="https://i.ibb.co.com/3hftmLC/rabbit.png" class="w-8 h-8">
+                    Rabbits
+                </button>
+                <button id="bird-btn" onclick="loadCategorisedData(`birds`),changeBtnColor('bird-btn','dog-btn','cat-btn','rabbit-btn')"
+                    class="btn hover:rounded-full md:px-5 md:btn-md lg:px-10 lg:btn-lg">
+                    <img src="https://i.ibb.co.com/6HHZwfq/bird.png" class="w-8 h-8">
+                    Birds
+                </button>
+            </div>
+            <!-- secondary button -->
+            <div class="flex justify-between mt-8">
+                <h2 class="font-black text-md p-4">Best Deal For You</h2>
+                <button class="btn btn-success bg-[#0E7A81] text-neutral-950" onclick="sort()">Sort by Price</button>
+            </div>
+            <!-- main card section -->
+            <section class="container mx-auto">
+                <div id="pet-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <div id="card-container" class="grid md:grid-cols-2 lg:grid-cols-3 md:col-span-3">
+                    </div>
+                    <div id="like-container" class="grid grid-cols-2 m-5 grid-flow-row auto-rows-max">
+                    </div>
+                    <div id="error-container-1" class="flex justify-center mx-auto">
+                    </div>
+                </div>
+            </section>
+            <!-- hidden loader section -->
+            <section>
+                <div id="loader" class="flex justify-center my-12 gap-5">
+                    <span class="loading loading-bars loading-xs"></span>
+                    <span class="loading loading-bars loading-sm"></span>
+                    <span class="loading loading-bars loading-md"></span>
+                    <span class="loading loading-bars loading-lg"></span>
+                </div>
+            </section>
+            <!-- Modal 1 -->
+            <section>
+                <dialog id="my_modal_1" class="modal" id="modal">
+                    <div class="modal-box">
+                        <div id="modal-container">
+
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn" onclick="close()">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </section>
+            <!-- Modal 2 -->
+            <section>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box h-[300px] flex justify-center items-center" id="modal-2"><div id="count">
+                            <h3 class="text-lg font-bold">Hello!</h3>
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </section>
+        </section>
+        <section id="error-container">
+            
+        </section>
+    </main>
+    <footer class="p-20 bg-black text-white md:flex justify-between">
+        <!-- navbar Start -->
+        <nav class="mb-10 md:mb-0">
+            <h6 class="">
+                <div class="flex">
+                    <img src="images/logo.webp" alt="paw-logo" style="width: 24px; height : 24px; "">
+                <a class=" footer-title ml-2">Peddy</a>
+                </div>
+            </h6>
+            <h3 class="mb-4">
+                Location: av. Washington 165, NY CA 54003 <br>
+                Phone: +31 85 964 47 25 <br>
+                Email: info@yourdomain.com <br>
+                Openings hours: 9.00 AM - 5.00 PM
+            </h3>
+            <div class="flex">
+                <img class="rounded-full" src="images/facebook-48.png" alt="" width="30" height="20">
+                <img src="images/twitterx-50.png" alt="twitterX-logo" class="bg-white rounded-full" width="30"
+                    height="20">
+                <img src="images/instagram-48.png" alt="instagram-logo" width="30" height="30">
+                <img src="images/youtube-48.png" alt="" width="30" height="30">
+            </div>
+        </nav>
+        <!-- useful links column -->
+        <nav class="flex flex-col mb-10 md:mb-0">
+            <h6 class="footer-title">Useful links</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Foundation</a>
+            <a class="link link-hover">Contact</a>
+        </nav>
+        <!-- navbar end  -->
+        <nav class="flex flex-col">
+            <h6 class="footer-title text-center">Drop a message</h6>
+            <div class="w-30 ">
+                <label class="input input-bordered flex items-center gap-2 bg-black">
+                    <input type="text" class="" placeholder="Enter your email" />
+                </label>
+                <button class="btn btn-success w-full bg-[#0E7A81] border-none ">Subscribe</button>
+            </div>
+        </nav>
+    </footer>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
